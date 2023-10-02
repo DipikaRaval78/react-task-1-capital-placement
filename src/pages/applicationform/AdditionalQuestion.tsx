@@ -121,16 +121,16 @@ const AdditionalQuestion = () => {
 
           <Select
             className="w-full h-11"
-            // options={OPTION}
+            options={OPTION}
             onChange={handleChange}
             value={type}
           
-          >
-            {OPTION.map((item,id) => (
+          />
+            {/* {OPTION.map((item,id) => (
             <option key={id} value={item.label}>{item.label}</option>
 
-            ))}
-          </Select>
+            ))} */}
+          {/* </Select> */}
           {/* <p>Question</p> */}
           <div style={{paddingBottom:"1rem",paddingTop:"1rem"}}>Question </div> 
 

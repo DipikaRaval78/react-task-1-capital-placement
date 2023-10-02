@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-cli serve --mode=development --env development --open --hot",
-    "build": "react-scripts build",
+    "build": "webpack  --env production --progress",
     "lint": "eslint './src/**/*.{ts,tsx}'",
     "lint:fix": "eslint './src/**/*.{ts,tsx}' --fix"
   },

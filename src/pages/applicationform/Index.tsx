@@ -1,6 +1,5 @@
 import React from "react";
 import "../applicationform/ApplicationForm.scss"
-// import {  UploadOutlined } from "@ant-design/icons";
 import UploadCoverImage from "./UploadCoverImage";
 import PersonalInformation from "./PersonalInformation";
 import Profile from "./Profile";

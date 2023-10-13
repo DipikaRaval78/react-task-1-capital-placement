@@ -97,7 +97,10 @@ const AdditionalQuestion = () => {
                   <div>
                     {
                         Activefield === id ?(
-                            <div>Hello</div>
+                            <div>Sorry Cant Edit
+
+                              
+                            </div>
 
                           ):null
 

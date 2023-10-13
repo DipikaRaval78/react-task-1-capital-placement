@@ -6,15 +6,28 @@ import AdditionalQuestion from "./AdditionalQuestion";
 import { Checkbox ,Switch} from "antd";
 
 
+
 const PersonalInformation = () => {
   const [newarr , setNewArr] = useState([])
+  const [checkedswitch, setcheckedswitch] = React.useState([]);
+
   const handlechange = e => {
     console.log(e.target)
     const  arr = PERSONAL_INFORMATION_CHECK.find(item => item.key  === e.target.id);
     arr.ischecked = !arr.ischecked;
     console.log(arr)
-   console.log(setNewArr([...newarr,arr]),newarr);
+    setNewArr([...newarr,arr])
+   console.log(setNewArr([...newarr,arr]));
+
     
+  };
+  const handleswithchange = (value) => {
+    console.log(value)
+    const switcharr = PERSONAL_INFORMATION_CHECK.find(item => item.key === value);
+    switcharr.isSwitchToggle = !switcharr.isSwitchToggle;
+
+    setcheckedswitch([...checkedswitch,switcharr])
+ 
   };
    return (
         <div>
@@ -39,10 +52,21 @@ const PersonalInformation = () => {
                   id={item.key}
                   onChange={handlechange}
                   checked={item.ischecked}
-              />
+                  title="Internal"
+              >Internal</Checkbox>
                <Switch
-               style={{backgroundColor:"gray"}}
+               className="back-css"
+                id={item.key}
+               title="Hide"
+               size="small"
+             
+              checked={item.isSwitchToggle[id]}
+              onChange={() => {
+                handleswithchange(item.key);
+              }}
                 />
+                <label>{item.isSwitchToggle ? "Hide" : "Show"}</label>
+             
               </div>
               </div>
               

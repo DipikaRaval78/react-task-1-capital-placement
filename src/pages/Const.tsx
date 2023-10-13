@@ -24,36 +24,47 @@ export const PERSONAL_INFORMATION_CHECK = [
      info: "without dial code",
      key: "phoneNumber",
      ischecked: false,
+     isSwitchToggle:false,
 
    },
    {
      name: "Nationality",
      key: "nationality",
      ischecked: false,
+     isSwitchToggle:false,
+
 
    },
    {
      name: "Current Residence",
      key: "currentResidence",
      ischecked: false,
+     isSwitchToggle:false,
+
 
    },
    {
      name: "ID Number",
      key: "idNumber",
      ischecked: false,
+     isSwitchToggle:false,
+
 
    },
    {
      name: "Date of Birth",
      key: "dateOfBirth",
      ischecked: false,
+     isSwitchToggle:false,
+
 
    },
    {
      name: "Gender",
      key: "gender",
      ischecked: false,
+     isSwitchToggle:false,
+
 
    },
  ];
@@ -62,15 +73,18 @@ export const PERSONAL_INFORMATION_CHECK = [
      name: "Education",
      key: "education",
      ischecked: false,
+     isSwitchToggle:false,
    },
    {
      name: "Experience",
      key: "experience",
      ischecked: false,
+     isSwitchToggle:false,
    },
    {
      name: "Resume",
      key: "resume",
      ischecked: false,
+     isSwitchToggle:false,
    },
  ];

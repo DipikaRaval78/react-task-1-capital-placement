@@ -7,16 +7,23 @@ import { Checkbox,Switch} from "antd";
 
 
 const Profile = () => {
-  
 
   const [newarr , setNewArr] = useState([])
+  const [checkedswitch, setcheckedswitch] = React.useState([]);
+
   const handlechange = e => {
-    console.log(e.target)
     const  arr = PROFILE.find(item => item.key  === e.target.id);
     arr.ischecked = !arr.ischecked;
-    console.log(arr)
-   console.log(setNewArr([...newarr,arr]),newarr);
+    setNewArr([...newarr,arr])
+  //  console.log(setNewArr([...newarr,arr]),newarr);
   }
+  const handleswithchange = (value) => {
+    const switcharr = PROFILE.find(item => item.key === value);
+    switcharr.isSwitchToggle = !switcharr.isSwitchToggle;
+
+    setcheckedswitch([...checkedswitch,switcharr])
+ 
+  };
   return (
     <div>
 
@@ -31,9 +38,20 @@ const Profile = () => {
                 onChange={handlechange}
                 checked={product.ischecked}
                
-              />
-               <Switch
+              >Mandatory</Checkbox>
+                <Switch
+               className="back-css"
+                id={product.key}
+               title="Hide"
+               size="small"
+             
+              checked={product.isSwitchToggle[idx]}
+              onChange={() => {
+                handleswithchange(product.key);
+              }}
                 />
+                <label>{product.isSwitchToggle ? "Hide" : "Show"}</label>
+
               </div>
         </div>
         </div>  
